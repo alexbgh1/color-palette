@@ -4,7 +4,7 @@ Página que en base a **3 colores** genera una paleta de colores con distintos *
 
 Hay distintas funciones más que no fueron aplicadas, la idea era buscar alguna relación en base a los valores **RGB**, tomando como base las paletas de colores de [tailwindcss](https://tailwindcss.com/docs/customizing-colors).
 
-si bien había una relación entre los colores, no era tan simple como una función lineal, por lo que se optó por la interpolación lineal. [Analizando la paleta de colores de tailwindcss](https://github.com/alexbgh1/color-palette/blob/main/colors_testing/plot_colors.ipynb)
+Si bien había una relación entre los colores, no era tan simple como una función lineal, por lo que se optó por la interpolación lineal. [Analizando la paleta de colores de tailwindcss](https://github.com/alexbgh1/color-palette/blob/main/colors_testing/plot_colors.ipynb)
 
 ## Preview
 
