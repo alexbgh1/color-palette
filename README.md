@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Generador de Paletas de Colores
 
-## Getting Started
+Página que en base a **3 colores** genera una paleta de colores con distintos **"steps" (pasos)**, en base a [interpolación lineal](https://en.wikipedia.org/wiki/Linear_interpolation), de los colores **RGB**.
 
-First, run the development server:
+Hay distintas funciones más que no fueron aplicadas, la idea era buscar alguna relación en base a los valores **RGB**, tomando como base las paletas de colores de [tailwindcss](https://tailwindcss.com/docs/customizing-colors).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+si bien había una relación entre los colores, no era tan simple como una función lineal, por lo que se optó por la interpolación lineal. [Analizando la paleta de colores de tailwindcss](https://github.com/alexbgh1/color-palette/blob/main/colors_testing/plot_colors.ipynb)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Preview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+[Visitar la página](https://color-palette-eosin.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Incial
 
-## Learn More
+![Inicial](https://i.imgur.com/dFhRH8x.png)
 
-To learn more about Next.js, take a look at the following resources:
+### Guardando paletas (LocalStorage)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Guardando paletas](https://i.imgur.com/owCZv4T.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Modo oscuro
 
-## Deploy on Vercel
+![Modo oscuro](https://i.imgur.com/M9pIk1s.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tecnologías
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [React](https://es.reactjs.org/)
+- [Next.js 13/app](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+
+## Características consideradas
+
+- [x] Generar paleta de colores en base a 3 colores
+- [x] Generar paleta de colores en base a un "step" (pasos)
+- [x] Guardar paletas en LocalStorage
+- [x] Exportar la paleta de colores como .txt
+- [x] Modo oscuro
+
+## Soporte CSS
+
+- [x] Desktop
+- [x] Tablet
+- [x] Mobile

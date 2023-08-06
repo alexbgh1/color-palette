@@ -21,7 +21,6 @@ const ShowSavedColorPalette = ({
   };
 
   const handleDownloadColorPalette = (savedColorPalette) => {
-    console.log("id", savedColorPalette);
     const colors = savedColorPalette.colors;
     let name = savedColorPalette.name;
 

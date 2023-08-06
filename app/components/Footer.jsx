@@ -9,7 +9,7 @@ const Footer = () => {
     >
       <p>Coded by </p>
       <Link
-        href="https://github.com/alexbgh1"
+        href="https://github.com/alexbgh1/color-palette"
         target="_blank"
         className="block text-accentDark/90 hover:text-accentDark dark:text-accent/90 dark:hover:text-accent"
       >

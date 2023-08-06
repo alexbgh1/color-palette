@@ -65,7 +65,7 @@ const SaveColors = ({ colorInterpolation, step, setSavedColorPalettes }) => {
           name="name"
           id="name"
           value={name}
-          placeholder="My Color Palette"
+          placeholder="Colors!!!!!!"
           onChange={handleChange}
         />
       </form>

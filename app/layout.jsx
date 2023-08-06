@@ -12,7 +12,11 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Color Palette",
-  description: "Color Palette",
+  description: "Color Palette using Linear Interpolation",
+  icons: {
+    icon: "/color-circle.png",
+  },
+  keywords: "Color Palette",
 };
 
 export default function RootLayout({ children }) {
@@ -21,6 +25,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.className} flex overflow-x-hidden h-screen flex-col items-center bg-primary dark:bg-primaryDark antialiased`}
       >
+        {/* Icon from: https://www.flaticon.com/authors/nikita-golubev */}
+        <link rel="icon" href={metadata.icons.icon} />
         <ThemeProv attribute="class" defaultTheme="system" enableSystem>
           <Header />
           {children}
