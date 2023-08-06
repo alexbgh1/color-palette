@@ -2,26 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* 
+
+Applied styles:
+  # GAP
+  Flex, gap-2 -> 8px
+  
+  # MARGIN
+  mb-4 -> 16px
+
+  # Border-radius
+  4px
+
+*/
+
+/* ===== Custom input[type="color"] rounded ===== */
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  width: 80px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+input[type="color"]::-moz-color-swatch {
+  border-radius: 4px;
+  border: none;
 }
+
+/* ===== Custom input[type="number"] ===== */
+input[type="number"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+  width: 40px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+}
+
+/* remove arrow up and arrow left */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+/* ===== Custom scrollbar ===== */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: currentColor;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5aaaff;
+  /* using bg-slate-50 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #3a8ee9;
+}
+
+/* ===== Query only on mobile device ===== */
