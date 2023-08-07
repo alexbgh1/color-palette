@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       className="w-full flex flex-row items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400
-    py-4 shadow-sm shadow-primaryDark dark:shadow-primary"
+    py-4 border-t border-gray-200 dark:border-gray-700"
     >
       <p>Coded by </p>
       <Link
