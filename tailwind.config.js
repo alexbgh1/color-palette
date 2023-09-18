@@ -12,7 +12,6 @@ module.exports = {
       colors: {
         primary: colors.slate[50],
         primaryDark: colors.slate[950],
-
         accent: colors.sky[300],
         accentDark: colors.sky[500],
       },

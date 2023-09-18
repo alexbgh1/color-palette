@@ -17,9 +17,7 @@ const SaveColors = ({ colorInterpolation, step, setSavedColorPalettes }) => {
   const [name, setName] = useState("");
 
   const handleSaveColorPalette = () => {
-    const confirmSave = confirm(
-      "Are you sure you want to save this color palette?"
-    );
+    const confirmSave = confirm("Are you sure you want to save this color palette?");
     if (!confirmSave) return;
 
     const savedColorPalette = {
@@ -39,9 +37,7 @@ const SaveColors = ({ colorInterpolation, step, setSavedColorPalettes }) => {
     const name = e.target.value;
 
     if (name.length > MAX_NAME_LENGTH) {
-      alert(
-        `Name must be less than ${MAX_NAME_LENGTH} characters. You entered ${name.length} characters.`
-      );
+      alert(`Name must be less than ${MAX_NAME_LENGTH} characters. You entered ${name.length} characters.`);
       return;
     }
     setName(e.target.value);

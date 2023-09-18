@@ -1,21 +1,13 @@
 import Color from "@/app/components/Colors/Color";
 import { DownloadFileIcon, ThrashIcon } from "@/app/icons/icons";
 
-const ShowSavedColorPalette = ({
-  savedColorPalette,
-  savedColorPalettes,
-  setSavedColorPalettes,
-}) => {
+const ShowSavedColorPalette = ({ savedColorPalette, savedColorPalettes, setSavedColorPalettes }) => {
   const handleDeleteColorPalette = (id) => {
-    const confirmDelete = confirm(
-      "Are you sure you want to delete this Color Palette?"
-    );
+    const confirmDelete = confirm("Are you sure you want to delete this Color Palette?");
     if (!confirmDelete) return;
 
     // Filter and return all savedColorPalettes that don't match the id
-    const newSavedColorPalettes = savedColorPalettes.filter(
-      (savedColorPalette) => savedColorPalette.id !== id
-    );
+    const newSavedColorPalettes = savedColorPalettes.filter((savedColorPalette) => savedColorPalette.id !== id);
 
     setSavedColorPalettes(newSavedColorPalettes);
   };
@@ -45,20 +37,13 @@ const ShowSavedColorPalette = ({
     // <!-- Each Saved Color Palette -->
     <article className="w-full flex flex-wrap md:flex-nowrap gap-2 items-center justify-center mb-8">
       {/* <!-- Name Color Palette --> */}
-      <section className="w-72 md:w-96 flex flex-row items-center justify-between gap-2 bg-gray-100 border-4 border-double border-gray-200 dark:bg-gray-700 px-2 py-1 shadow-sm">
+      <section className="w-72 md:w-96 flex flex-row items-center justify-between gap-2 bg-gray-100 border-4 border-double border-gray-400 dark:bg-gray-700 px-2 py-1 shadow-sm">
         <p className="text-sm rounded-s">{savedColorPalette.name}</p>
         <div className="flex flex-row gap-2">
-          <button
-            className="w-3"
-            onClick={() => handleDeleteColorPalette(savedColorPalette.id)}
-          >
+          <button className="w-3" onClick={() => handleDeleteColorPalette(savedColorPalette.id)}>
             <ThrashIcon fill="accent" title="Delete Color Palette" />
           </button>
-          <button
-            className="w-3"
-            value="download"
-            onClick={() => handleDownloadColorPalette(savedColorPalette)}
-          >
+          <button className="w-3" value="download" onClick={() => handleDownloadColorPalette(savedColorPalette)}>
             <DownloadFileIcon title="Download as txt" />
           </button>
         </div>
