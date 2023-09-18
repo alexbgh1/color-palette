@@ -37,7 +37,7 @@ const ShowSavedColorPalette = ({ savedColorPalette, savedColorPalettes, setSaved
     // <!-- Each Saved Color Palette -->
     <article className="w-full flex flex-wrap md:flex-nowrap gap-2 items-center justify-center mb-8">
       {/* <!-- Name Color Palette --> */}
-      <section className="w-72 md:w-96 flex flex-row items-center justify-between gap-2 bg-gray-100 border-4 border-double border-gray-400 dark:bg-gray-700 px-2 py-1 shadow-sm">
+      <section className="w-72 md:w-96 flex flex-row items-center justify-between gap-2 bg-gray-100 border-4 border-double border-gray-300 dark:border-gray-400 dark:bg-gray-700 px-2 py-1 shadow-sm">
         <p className="text-sm rounded-s">{savedColorPalette.name}</p>
         <div className="flex flex-row gap-2">
           <button className="w-3" onClick={() => handleDeleteColorPalette(savedColorPalette.id)}>
